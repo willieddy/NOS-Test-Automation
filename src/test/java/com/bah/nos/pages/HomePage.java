@@ -1,39 +1,23 @@
 package com.bah.nos.pages;
 
-import ch.lambdaj.function.convert.Converter;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WebDriver;
 
-import net.thucydides.core.pages.PageObject;
+@DefaultUrl("https://www.nativeonestop.gov")
+public class HomePage extends NosBasePage {
 
-import java.util.List;
+    @FindBy(xpath = "//div[@id='welcome']/h3")
+    private WebElementFacade pageTitle;
 
-import static ch.lambdaj.Lambda.convert;
 
-@DefaultUrl("https://nativeonestop.gov")
-public class HomePage extends PageObject {
-
-    @FindBy(id="benefinder-button")
-    private WebElementFacade benefinderButton;
-
-    public void startResourceFinder() {
-        benefinderButton.click();
+    public HomePage(WebDriver webDriver) {
+        super(webDriver);
     }
 
-    public List<String> getDefinitions() {
-        WebElementFacade definitionList = find(By.tagName("ol"));
-        List<WebElement> results = definitionList.findElements(By.tagName("li"));
-        return convert(results, toStrings());
-    }
-
-    private Converter<WebElement, String> toStrings() {
-        return new Converter<WebElement, String>() {
-            public String convert(WebElement from) {
-                return from.getText();
-            }
-        };
+    @Override
+    public String getPageTitle() {
+        return pageTitle.getText();
     }
 }
