@@ -1,10 +1,14 @@
 Find Resources
-Narrative:
-In order to find government benefits that apply to me
-As a Native American
-I want to look up resource
 
-Scenario: Navigate to Resource Finder Page
-Given the user is on the Native One Stop home page
-When the user navigates to the ResourceFinder page
-Then they should see the title Resource Finder
+Meta:
+@feature Resource Finder
+
+Narrative:
+As a user
+I want to use the resource finder
+So that I can find government benefits that apply to me
+
+Scenario: Find benefits using benefit finder
+Given I am on the Native One Stop home page
+When I complete the resource finder questionnaire
+Then I should see available benefits

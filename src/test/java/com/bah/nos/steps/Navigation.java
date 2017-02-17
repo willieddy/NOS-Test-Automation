@@ -10,7 +10,7 @@ import org.jbehave.core.annotations.When;
 public class Navigation {
 
     @Steps
-    NavigationSteps navigationSteps;
+    private NavigationSteps navigationSteps;
 
     @Given("I am on the Native One Stop home page")
     public void givenHomePage() {
@@ -20,9 +20,9 @@ public class Navigation {
     @When("I click on <navBarButton> on the top navigation bar")
     public void clickNavBarButton(@Named("navBarButton") String navBarButton) throws ReflectiveOperationException {
         navigationSteps.navigate(navBarButton);
-}
+    }
 
-    @Then("the <pageName> page should open correctly")
+    @Then("I should see the <pageName> page")
     public void thenTheyShouldSeeTheTitle(@Named("pageName") String pageTitle) {
         navigationSteps.verifyTitle(pageTitle);
     }

@@ -1,13 +1,17 @@
 Navigate
+
+Meta:
+@feature Navigate
+
 Narrative:
 As a user
 I want to be able to navigate around the nativeonestop.gov site
 So that I can find the desired site functionality
 
-Scenario: scenario description
+Scenario: navigate around site
 Given I am on the Native One Stop home page
 When I click on <navBarButton> on the top navigation bar
-Then the <pageName> page should open correctly
+Then I should see the <pageName> page
 Examples:
 |pageName|navBarButton|
 |WELCOME TO NATIVE ONE STOP|Home|
