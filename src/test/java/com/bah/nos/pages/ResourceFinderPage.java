@@ -17,6 +17,7 @@ public class ResourceFinderPage extends NosBasePage {
 
     public ResourceFinderPage answerQuestions() {
 
-        return new ResourceFinderPage(getDriver());
+
+        return this;
     }
 }
