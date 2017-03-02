@@ -10,5 +10,8 @@ So that I can find government benefits that apply to me
 
 Scenario: Find benefits using benefit finder
 Given I am on the Native One Stop resource finder page
-When I complete the resource finder questionnaire
-Then I should see available benefits
+When I enter my <information> into the questionnaire
+Then I should see available benefits related to my <information>
+Examples:
+|information|
+|TestCase1.json|

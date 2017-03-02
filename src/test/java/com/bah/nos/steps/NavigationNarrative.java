@@ -1,6 +1,6 @@
 package com.bah.nos.steps;
 
-import com.bah.nos.pages.NosPageEnum;
+import com.bah.nos.model.NosPageEnum;
 import com.bah.nos.steps.serenity.NavigationSteps;
 import net.thucydides.core.annotations.Steps;
 import org.jbehave.core.annotations.Given;
@@ -17,11 +17,6 @@ public class NavigationNarrative {
     public void onHomePage() throws ReflectiveOperationException {
         navigationSteps.openPage(NosPageEnum.HOME);
     }
-
-//    @Given("I am on the Native One Stop resource finder page")
-//    public void onResourceFinderPage() {
-//        resourceFinderSteps.navigate();
-//    }
 
     @When("I click on <navBarPath> on the top navigation bar")
     public void clickNavBarButton(@Named("navBarPath") String navBarPath) throws ReflectiveOperationException {

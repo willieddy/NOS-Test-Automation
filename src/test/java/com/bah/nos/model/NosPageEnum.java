@@ -1,6 +1,8 @@
-package com.bah.nos.pages;
+package com.bah.nos.model;
 
-import org.openqa.selenium.NotFoundException;
+import com.bah.nos.pages.HomePage;
+import com.bah.nos.pages.NosBasePage;
+import com.bah.nos.pages.ResourceFinderPage;
 
 import java.util.ArrayList;
 import java.util.Arrays;

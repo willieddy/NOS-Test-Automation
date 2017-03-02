@@ -1,5 +1,6 @@
 package com.bah.nos.pages;
 
+import com.bah.nos.model.NosPageEnum;
 import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
@@ -10,10 +11,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 @DefaultUrl("https://www.nativeonestop.gov")
 public class NosBasePage extends PageObject {
