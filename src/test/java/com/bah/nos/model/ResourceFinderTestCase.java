@@ -10,7 +10,7 @@ public class ResourceFinderTestCase {
 
     private List<ResourceFinderAnswer> answers;
 
-    private List<ResourceFinderAssertion> assertions;
+    private ResourceFinderAssertions assertions;
 
     public String getTitle() {
         return title;
@@ -36,11 +36,11 @@ public class ResourceFinderTestCase {
         this.answers = answers;
     }
 
-    public List<ResourceFinderAssertion> getAssertions() {
+    public ResourceFinderAssertions getAssertions() {
         return assertions;
     }
 
-    public void setAssertions(List<ResourceFinderAssertion> assertions) {
+    public void setAssertions(ResourceFinderAssertions assertions) {
         this.assertions = assertions;
     }
 }

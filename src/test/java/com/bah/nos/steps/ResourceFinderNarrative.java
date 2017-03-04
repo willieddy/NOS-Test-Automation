@@ -25,7 +25,7 @@ public class ResourceFinderNarrative {
     }
 
     @Then("I should see available benefits related to my <information>")
-    public void thenBenefitsDisplayed(@Named("information") String testCaseFileName) {
+    public void thenBenefitsDisplayed(@Named("information") String testCaseFileName) throws IOException {
         resourceFinderSteps.verifyBenefitsDisplayed(testCaseFileName);
     }
 }

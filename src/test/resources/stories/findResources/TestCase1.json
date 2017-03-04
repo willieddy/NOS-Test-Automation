@@ -5,37 +5,32 @@
     {
       "section": "CORE",
       "questionId": 1,
-      "questionText": "Choose the option that best describes your citizenship status:",
       "answerType": "RADIO",
       "answer": "U.S. Citizen"
     },
     {
       "section": "CORE",
       "questionId": 2,
-      "questionText": "What is your current employment status?",
-      "answerType": "radio",
+      "answerType": "RADIO",
       "answer": "Employed (part-time or seasonal)"
     },
     {
       "section": "CORE",
       "questionId": 3,
-      "questionText": "How many people live in your household? Example: 5",
-      "answerType": "text",
+      "answerType": "TEXT",
       "answer": "6"
     },
     {
       "section": "CORE",
       "questionId": 4,
-      "questionText": "What is your household's annual income before taxes? Example: 25000",
-      "answerType": "text",
+      "answerType": "TEXT",
       "answer": "20000"
     }
   ],
-    "assertions": [
-    {
-      "resourceTitle": "WEATHERIZATION ASSISTANCE PROGRAM FOR LOW-INCOME PERSONS",
-      "isAvailable": true
-    }
-  ],
-  "isAssertionExclusive": true
+  "assertions": {
+    "totalResourceCount": 1,
+    "resourceTitles": [
+        "WEATHERIZATION ASSISTANCE PROGRAM FOR LOW-INCOME PERSONS"
+    ]
+  }
 }
