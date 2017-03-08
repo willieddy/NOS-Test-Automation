@@ -4,27 +4,39 @@
   "answers": [
     {
       "section": "CORE",
+      "pageNum": 1,
       "questionId": 1,
       "answerType": "RADIO",
-      "answer": "U.S. Citizen"
+      "answer": [
+        "U.S. Citizen"
+      ]
     },
     {
       "section": "CORE",
+      "pageNum": 1,
       "questionId": 2,
       "answerType": "RADIO",
-      "answer": "Employed (part-time or seasonal)"
+      "answer": [
+        "Employed (part-time or seasonal)"
+      ]
     },
     {
       "section": "CORE",
+      "pageNum": 1,
       "questionId": 3,
       "answerType": "TEXT",
-      "answer": "6"
+      "answer": [
+        "6"
+      ]
     },
     {
       "section": "CORE",
+      "pageNum": 1,
       "questionId": 4,
       "answerType": "TEXT",
-      "answer": "20000"
+      "answer": [
+        "20000"
+      ]
     }
   ],
   "assertions": {

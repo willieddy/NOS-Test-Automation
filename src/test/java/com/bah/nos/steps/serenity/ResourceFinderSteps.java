@@ -1,5 +1,6 @@
 package com.bah.nos.steps.serenity;
 
+import com.bah.nos.model.NosPageEnum;
 import com.bah.nos.model.ResourceFinderAnswer;
 import com.bah.nos.model.ResourceFinderAssertions;
 import com.bah.nos.model.ResourceFinderTestCase;
@@ -29,28 +30,28 @@ public class ResourceFinderSteps {
     public void completeResourceFinder(String testCaseFileName) throws IOException {
         ResourceFinderTestCase testCase = getTestCase(testCaseFileName);
 
-        boolean hasLeftCore = false;
         for (ResourceFinderAnswer answer : testCase.getAnswers()) {
             currentPage = currentPage.answer(answer);
         }
-    }
-
-    @Step
-    public void verifyBenefitsDisplayed(String testCaseFileName) throws IOException {
-        ResourceFinderAssertions assertions = getTestCase(testCaseFileName).getAssertions();
 
         //TODO Verify next button is clickable
         if (ResourceFinderAnswer.QuestionSectionEnum.CORE.name().equals(currentPage.getSectionTitle())) {
+            // If we're still on core page, click next so that total resources available becomes clickable
             currentPage = currentPage.clickNextButton().waitUntilBenefitTotalVisible();
 
             try {
-                // I don't like sleeping in tests, waiting on elements to load is better,
+                // I don't like sleeping in tests (waiting on elements to load is better),
                 // but this element loads with an incorrect value then corrects itself
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
                 log.error("Sleep Interrupted!!!");
             }
         }
+    }
+
+    @Step
+    public void verifyBenefitsDisplayed(String testCaseFileName) throws IOException {
+        ResourceFinderAssertions assertions = getTestCase(testCaseFileName).getAssertions();
 
         Assert.assertEquals(assertions.getTotalResourceCount(), currentPage.getBenefitTotal());
 

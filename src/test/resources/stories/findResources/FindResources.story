@@ -14,4 +14,4 @@ When I enter my <information> into the questionnaire
 Then I should see available benefits related to my <information>
 Examples:
 |information|
-|TestCase1.json|
+|TestCase2.json|

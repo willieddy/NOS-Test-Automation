@@ -1,0 +1,342 @@
+{
+  "title": "Resource Finder Test Case 2",
+  "summary": "All Sections",
+  "answers": [
+    {
+      "section": "CORE",
+      "pageNum": 1,
+      "questionId": 1,
+      "answerType": "RADIO",
+      "answer": [
+        "U.S. Citizen"
+      ]
+    },
+    {
+      "section": "CORE",
+      "pageNum": 1,
+      "questionId": 2,
+      "answerType": "RADIO",
+      "answer": [
+        "Employed (part-time or seasonal)"
+      ]
+    },
+    {
+      "section": "CORE",
+      "pageNum": 1,
+      "questionId": 3,
+      "answerType": "TEXT",
+      "answer": [
+        "6"
+      ]
+    },
+    {
+      "section": "CORE",
+      "pageNum": 1,
+      "questionId": 4,
+      "answerType": "TEXT",
+      "answer": [
+        "20000"
+      ]
+    },
+    {
+      "section": "GENERAL",
+      "pageNum": 1,
+      "questionId": 1,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "I represent a federally recognized Indian Tribe",
+        "I reside in one of the 17 Western States (AZ, CO, CA, ID, KS, MT, ND, NE, NM, NV, OK, OR, SD, TX, UT, WA, WY)"
+      ]
+    },
+    {
+      "section": "GENERAL",
+      "pageNum": 1,
+      "questionId": 2,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "Native American or American Indian"
+      ]
+    },
+    {
+      "section": "GENERAL",
+      "pageNum": 1,
+      "questionId": 3,
+      "answerType": "RADIO",
+      "answer": [
+        "Private residence"
+      ]
+    },
+    {
+      "section": "GENERAL",
+      "pageNum": 1,
+      "questionId": 4,
+      "answerType": "RADIO",
+      "answer": [
+        "Not a student"
+      ]
+    },
+    {
+      "section": "GENERAL",
+      "pageNum": 1,
+      "questionId": 5,
+      "answerType": "RADIO",
+      "answer": [
+        "Not currently enrolled in an academic program"
+      ]
+    },
+    {
+      "section": "GENERAL",
+      "pageNum": 2,
+      "questionId": 6,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "Agricultural producer or farmer",
+        "Dairy farmer",
+        "Rancher",
+        "Performing artist"
+      ]
+    },
+    {
+      "section": "GENERAL",
+      "pageNum": 2,
+      "questionId": 7,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "I do not receive any of these benefits"
+      ]
+    },
+    {
+      "section": "GENERAL",
+      "pageNum": 2,
+      "questionId": 8,
+      "answerType": "RADIO",
+      "answer": [
+        "Yes"
+      ]
+    },
+    {
+      "section": "GENERAL",
+      "pageNum": 2,
+      "questionId": 9,
+      "answerType": "RADIO",
+      "answer": [
+        "No"
+      ]
+    },
+    {
+      "section": "GENERAL",
+      "pageNum": 2,
+      "questionId": 10,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "Addressing the problems of drug-related crime in your neighborhood",
+        "Land or property ownership",
+        "Mental health services ",
+        "Women's health care",
+        "The development of American Indian and Alaskan Native arts and crafts",
+        "Environmental or conservation issues",
+        "Training or retraining to develop new job skills"
+      ]
+    },
+    {
+      "section": "GENERAL",
+      "pageNum": 3,
+      "questionId": 11,
+      "answerType": "RADIO",
+      "answer": [
+        "No"
+      ]
+    },
+    {
+      "section": "HOUSEHOLD",
+      "pageNum": 1,
+      "questionId": 1,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "Current or prospective homeowner",
+        "Live in a high-poverty community",
+        "Live in a rural area",
+        "Live on or near an Indian reservation",
+        "In need of aid to obtain decent, safe, and/or sanitary housing",
+        "Live on an Indian reservation or in an Alaska Native village"
+      ]
+    },
+    {
+      "section": "HOUSEHOLD",
+      "pageNum": 1,
+      "questionId": 2,
+      "answerType": "RADIO",
+      "answer": [
+        "Yes"
+      ]
+    },
+    {
+      "section": "HOUSEHOLD",
+      "pageNum": 1,
+      "questionId": 3,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "Need help to ensure child is not separated from your home",
+        "Responsible for a child who is too young for public school",
+        "Responsible for a child experiencing developmental delays (cognitive, physical, communication, social, emotional or self-help)",
+        "Responsible for a child(ren) who attend(s) school (high school or under)",
+        "Need assistance paying for child care",
+        "Responsible for a child(ren) who is a current or prospective undergraduate student"
+      ]
+    },
+    {
+      "section": "HOUSEHOLD",
+      "pageNum": 1,
+      "questionId": 4,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "2",
+        "7",
+        "12",
+        "16"
+      ]
+    },
+    {
+      "section": "HOUSEHOLD",
+      "pageNum": 1,
+      "questionId": 5,
+      "answerType": "RADIO",
+      "answer": [
+        "No"
+      ]
+    },
+    {
+      "section": "EDUCATION",
+      "pageNum": 1,
+      "questionId": 2,
+      "answerType": "RADIO",
+      "answer": [
+        "Grade school"
+      ]
+    },
+    {
+      "section": "EDUCATION",
+      "pageNum": 1,
+      "questionId": 3,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "Arts",
+        "Child care"
+      ]
+    },
+    {
+      "section": "EDUCATION",
+      "pageNum": 1,
+      "questionId": 4,
+      "answerType": "RADIO",
+      "answer": [
+        "No"
+      ]
+    },
+    {
+      "section": "HEALTH",
+      "pageNum": 1,
+      "questionId": 1,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "Limb function or length differences ",
+        "Limb loss"
+      ]
+    },
+    {
+      "section": "HEALTH",
+      "pageNum": 1,
+      "questionId": 2,
+      "answerType": "RADIO",
+      "answer": [
+        "No"
+      ]
+    },
+    {
+      "section": "INCOME & ASSISTANCE",
+      "pageNum": 1,
+      "questionId": 2,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "Housing debt/mortgage"
+      ]
+    },
+    {
+      "section": "INCOME & ASSISTANCE",
+      "pageNum": 1,
+      "questionId": 3,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "Food costs",
+        "Health care/insurance costs",
+        "High medical expenses in relation to my income",
+        "Home energy costs",
+        "Mortgage payments"
+      ]
+    },
+    {
+      "section": "INCOME & ASSISTANCE",
+      "pageNum": 1,
+      "questionId": 4,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "Refinancing an existing mortgage",
+        "Planning to repair or improve a residential structure that is more than one year old"
+      ]
+    },
+    {
+      "section": "INCOME & ASSISTANCE",
+      "pageNum": 1,
+      "questionId": 5,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "Own or control working land that may be suitable for providing wildlife habitat and/or for implementing restoration or conservation measures.",
+        "Am, or will be, the owner or tenant operator of a family farm",
+        "Assistance in complying with environmental laws",
+        "In need of farm loan",
+        "Own or control land that may be restorable and suitable for wildlife",
+        "Owned or operated your agricultural land for at least a year"
+      ]
+    },
+    {
+      "section": "INCOME & ASSISTANCE",
+      "pageNum": 2,
+      "questionId": 6,
+      "answerType": "RADIO",
+      "answer": [
+        "Very low income"
+      ]
+    },
+    {
+      "section": "INCOME & ASSISTANCE",
+      "pageNum": 2,
+      "questionId": 7,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "Supplemental Nutrition Assistance Program (formerly Food Stamps)",
+        "Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)",
+        "Temporary Assistance for Needy Families (TANF)",
+        "Unemployment Benefits",
+        "Medicare"
+      ]
+    },
+    {
+      "section": "WORK EXPERIENCE",
+      "pageNum": 1,
+      "questionId": 1,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "Authorized to work in the United States"
+      ]
+    }
+  ],
+  "assertions": {
+    "totalResourceCount": 46,
+    "resourceTitles": [
+      "DIVISION OF INDIAN AND NATIVE AMERICAN PROGRAMS (DINAP)",
+      "RURAL ENERGY FOR AMERICA PROGRAM (REAP)",
+      "WIC FARMERS' MARKET NUTRITION PROGRAM (FMNP)",
+      "SPECIAL MILK PROGRAM"
+    ]
+  }
+}

@@ -6,7 +6,7 @@ Serenity makes no distinction between the
 JBehave-style @Given, @When and @Then annotations, and the Serenity-style @Step annotations: both will appear in the 
 test reports. However you need to start with the @Given, @When and @Then-annotated methods so that JBehave can find the 
 correct methods to call for your stories. A method annotated with @Given, @When or @Then can call Serenity @Step 
-methods, or call page objects directly (though the extra level of abstraction provided by the @Step methods tends to 
+methods, or call pageNum objects directly (though the extra level of abstraction provided by the @Step methods tends to 
 make the tests more reusable and maintainable on larger projects).
 
 ### Configuration
@@ -16,6 +16,28 @@ make the tests more reusable and maintainable on larger projects).
 - Heirarchy for stories configured by `serenity.requirement.types`
   - Epic
   - Story
+  
+### Running the Tests
+
+- [Maven Goals](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html) are configured in pom
+for generating report
+- At time of writing:
+```         
+<plugin>
+    <groupId>net.serenity-bdd.maven.plugins</groupId>
+    <artifactId>serenity-maven-plugin</artifactId>
+    <version>${serenity.version}</version>
+    <executions>
+        <execution>
+            <id>serenity-reports</id>
+            <phase>post-integration-test</phase>
+            <goals>
+                <goal>aggregate</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+``` 
   
 ### [Data Driven Tests](http://serenity-bdd.info/docs/serenity/#_data_driven_tests)
 
