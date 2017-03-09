@@ -1,0 +1,72 @@
+{
+  "title": "Resource Finder Test Case 2",
+  "summary": "Core and Health",
+  "answers": [
+    {
+      "section": "CORE",
+      "pageNum": 1,
+      "questionId": 1,
+      "answerType": "RADIO",
+      "answer": [
+        "U.S. Citizen"
+      ]
+    },
+    {
+      "section": "CORE",
+      "pageNum": 1,
+      "questionId": 2,
+      "answerType": "RADIO",
+      "answer": [
+        "Employed (part-time or seasonal)"
+      ]
+    },
+    {
+      "section": "CORE",
+      "pageNum": 1,
+      "questionId": 3,
+      "answerType": "TEXT",
+      "answer": [
+        "6"
+      ]
+    },
+    {
+      "section": "CORE",
+      "pageNum": 1,
+      "questionId": 4,
+      "answerType": "TEXT",
+      "answer": [
+        "20000"
+      ]
+    },
+    {
+      "section": "HEALTH",
+      "pageNum": 1,
+      "questionId": 1,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "Limb function or length differences",
+        "Limb loss"
+      ]
+    },
+    {
+      "section": "HEALTH",
+      "pageNum": 1,
+      "questionId": 2,
+      "answerType": "RADIO",
+      "answer": [
+        "No"
+      ]
+    },
+    {
+      "section": "INCOME & ASSISTANCE",
+      "pageNum": 1,
+      "questionId": 2,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "Housing debt/mortgage"
+      ]
+    }
+  ],
+  "assertions": {
+  }
+}

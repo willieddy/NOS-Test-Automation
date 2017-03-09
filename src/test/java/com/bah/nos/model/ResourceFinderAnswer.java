@@ -2,6 +2,7 @@ package com.bah.nos.model;
 
 import org.codehaus.jackson.annotate.JsonCreator;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -13,11 +14,9 @@ public class ResourceFinderAnswer {
 
     private Integer pageNum;
 
-    private String questionText;
-
     private AnswerTypeEnum answerType;
 
-    private List<String> answer;
+    private List<String> answer = new ArrayList<>();
 
     public QuestionSectionEnum getSection() {
         return section;
@@ -41,14 +40,6 @@ public class ResourceFinderAnswer {
 
     public void setPageNum(Integer pageNum) {
         this.pageNum = pageNum;
-    }
-
-    public String getQuestionText() {
-        return questionText;
-    }
-
-    public void setQuestionText(String questionText) {
-        this.questionText = questionText;
     }
 
     public AnswerTypeEnum getAnswerType() {

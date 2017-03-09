@@ -131,7 +131,7 @@
       "answer": [
         "Addressing the problems of drug-related crime in your neighborhood",
         "Land or property ownership",
-        "Mental health services ",
+        "Mental health services",
         "Women's health care",
         "The development of American Indian and Alaskan Native arts and crafts",
         "Environmental or conservation issues",
@@ -239,7 +239,7 @@
       "questionId": 1,
       "answerType": "CHECKBOX",
       "answer": [
-        "Limb function or length differences ",
+        "Limb function or length differences",
         "Limb loss"
       ]
     },
@@ -249,7 +249,7 @@
       "questionId": 2,
       "answerType": "RADIO",
       "answer": [
-        "No"
+        "Yes"
       ]
     },
     {
@@ -308,19 +308,6 @@
       ]
     },
     {
-      "section": "INCOME & ASSISTANCE",
-      "pageNum": 2,
-      "questionId": 7,
-      "answerType": "CHECKBOX",
-      "answer": [
-        "Supplemental Nutrition Assistance Program (formerly Food Stamps)",
-        "Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)",
-        "Temporary Assistance for Needy Families (TANF)",
-        "Unemployment Benefits",
-        "Medicare"
-      ]
-    },
-    {
       "section": "WORK EXPERIENCE",
       "pageNum": 1,
       "questionId": 1,
@@ -338,5 +325,8 @@
       "WIC FARMERS' MARKET NUTRITION PROGRAM (FMNP)",
       "SPECIAL MILK PROGRAM"
     ]
+  },
+  "favorites": {
+
   }
 }

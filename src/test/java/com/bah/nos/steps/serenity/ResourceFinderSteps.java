@@ -1,6 +1,5 @@
 package com.bah.nos.steps.serenity;
 
-import com.bah.nos.model.NosPageEnum;
 import com.bah.nos.model.ResourceFinderAnswer;
 import com.bah.nos.model.ResourceFinderAssertions;
 import com.bah.nos.model.ResourceFinderTestCase;
@@ -34,7 +33,6 @@ public class ResourceFinderSteps {
             currentPage = currentPage.answer(answer);
         }
 
-        //TODO Verify next button is clickable
         if (ResourceFinderAnswer.QuestionSectionEnum.CORE.name().equals(currentPage.getSectionTitle())) {
             // If we're still on core page, click next so that total resources available becomes clickable
             currentPage = currentPage.clickNextButton().waitUntilBenefitTotalVisible();
@@ -53,7 +51,9 @@ public class ResourceFinderSteps {
     public void verifyBenefitsDisplayed(String testCaseFileName) throws IOException {
         ResourceFinderAssertions assertions = getTestCase(testCaseFileName).getAssertions();
 
-        Assert.assertEquals(assertions.getTotalResourceCount(), currentPage.getBenefitTotal());
+        if (assertions.getTotalResourceCount() != null) {
+            Assert.assertEquals(assertions.getTotalResourceCount(), currentPage.getBenefitTotal());
+        }
 
         currentPage = currentPage.clickBenefitTotal();
 

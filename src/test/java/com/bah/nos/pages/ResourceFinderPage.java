@@ -66,12 +66,14 @@ public class ResourceFinderPage extends NosBasePage {
 
     // -------- Question and answer xpath strings --------
 
-    private static final String PARENT_QUESTION_XPATH =
-            "//div[./legend/div/span[@class='badge badge-info ui-question-text-number' and text()='%d']]";
+    private static final String ACTIVE_SECTION_XPATH = "//div[@class='tab-content']";
+
+    private static final String PARENT_QUESTION_XPATH = ACTIVE_SECTION_XPATH +
+            "/fieldset/div[./legend/div/span[@class='badge badge-info ui-question-text-number' and text()='%d']]";
 
     //The string input for answer label does not include single quotes, required to be placed by String.format
-    private static final String ANSWER_BUTTON_XPATH =
-            PARENT_QUESTION_XPATH + "/div/label/input[@data-answerlabel=%s]";
+    private static final String ANSWER_BUTTON_XPATH = PARENT_QUESTION_XPATH +
+            "/div/label/input[normalize-space(@data-answerlabel)=%s]";
 
     private static final String TEXT_INPUT_XPATH = PARENT_QUESTION_XPATH + "/div/input[@type='text']";
 
