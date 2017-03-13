@@ -1,16 +1,22 @@
 package com.bah.nos.model;
 
+import org.codehaus.jackson.annotate.JsonCreator;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class ResourceFinderAnswer {
 
     private QuestionSectionEnum section;
 
     private Integer questionId;
 
-    private String questionText;
+    private Integer pageNum;
 
     private AnswerTypeEnum answerType;
 
-    private String answer;
+    private List<String> answer = new ArrayList<>();
 
     public QuestionSectionEnum getSection() {
         return section;
@@ -28,12 +34,12 @@ public class ResourceFinderAnswer {
         this.questionId = questionId;
     }
 
-    public String getQuestionText() {
-        return questionText;
+    public Integer getPageNum() {
+        return pageNum;
     }
 
-    public void setQuestionText(String questionText) {
-        this.questionText = questionText;
+    public void setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
     }
 
     public AnswerTypeEnum getAnswerType() {
@@ -44,19 +50,52 @@ public class ResourceFinderAnswer {
         this.answerType = answerType;
     }
 
-    public String getAnswer() {
+    //TODO extend this class and do dynamic deserialization so only CHECKBOX type has list
+    public List<String> getAnswer() {
         return answer;
     }
 
-    public void setAnswer(String answer) {
+    public void setAnswer(List<String> answer) {
         this.answer = answer;
     }
 
     public enum QuestionSectionEnum {
-        CORE, GENERAL, HOUSEHOLD, EDUCATION, HEALTH, INCOME_ASSISTANCE, WORK_EXPERIENCE;
+        CORE("Core"),
+        GENERAL("General"),
+        HOUSEHOLD("Household"),
+        EDUCATION("Education"),
+        HEALTH("Health"),
+        INCOME_ASSISTANCE("Income & Assistance"),
+        WORK_EXPERIENCE("Work Experience");
+
+        private String sectionTitle;
+
+        QuestionSectionEnum(String sectionTitle) {
+            this.sectionTitle = sectionTitle;
+        }
+
+        @JsonCreator
+        public static QuestionSectionEnum forValue(String value) {
+            return Arrays.stream(QuestionSectionEnum.values())
+                    .filter(s -> s.getSectionTitle().equalsIgnoreCase(value))
+                    .findFirst().get();
+        }
+
+        public String getSectionTitle() {
+            return sectionTitle;
+        }
     }
 
     public enum AnswerTypeEnum {
-        RADIO, TEXT;
+        RADIO, TEXT, CHECKBOX
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append(section.getSectionTitle());
+        builder.append(" Section, Question ID ");
+        builder.append(questionId);
+        return builder.toString();
     }
 }

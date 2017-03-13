@@ -1,9 +1,12 @@
 package com.bah.nos.steps.serenity;
 
 import com.bah.nos.model.ResourceFinderAnswer;
-import com.bah.nos.model.ResourceFinderAssertions;
+import com.bah.nos.model.ResourceFinderResult;
 import com.bah.nos.model.ResourceFinderTestCase;
-import com.bah.nos.pages.ResourceFinderPage;
+import com.bah.nos.model.pages.ResourceFinderFavoritePage;
+import com.bah.nos.model.pages.ResourceFinderQuestionPage;
+import com.bah.nos.model.pages.ResourceFinderResultPage;
+import net.thucydides.core.annotations.Screenshots;
 import net.thucydides.core.annotations.Step;
 import org.apache.commons.io.IOUtils;
 import org.codehaus.jackson.map.ObjectMapper;
@@ -12,61 +15,71 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 public class ResourceFinderSteps {
+
     private static final Logger log = LoggerFactory.getLogger(ResourceFinderSteps.class);
 
-    private ResourceFinderPage currentPage;
+    private ResourceFinderQuestionPage questionPage;
+
+    private ResourceFinderResultPage resultPage;
+
+    private ResourceFinderFavoritePage favoritePage;
 
     @Step
     public void openPage() {
-        currentPage.open();
+        questionPage.open();
     }
 
     @Step
-    public void completeResourceFinder(String testCaseFileName) throws IOException {
-        ResourceFinderTestCase testCase = getTestCase(testCaseFileName);
-
-        boolean hasLeftCore = false;
-        for (ResourceFinderAnswer answer : testCase.getAnswers()) {
-            currentPage = currentPage.answer(answer);
-        }
+    public void answerQuestion(ResourceFinderAnswer resourceFinderAnswer) {
+        questionPage.answer(resourceFinderAnswer);
     }
 
     @Step
-    public void verifyBenefitsDisplayed(String testCaseFileName) throws IOException {
-        ResourceFinderAssertions assertions = getTestCase(testCaseFileName).getAssertions();
+    public void navigateToResults() {
+        questionPage.clickQuestionnaireNavResults();
+    }
 
-        //TODO Verify next button is clickable
-        if (ResourceFinderAnswer.QuestionSectionEnum.CORE.name().equals(currentPage.getSectionTitle())) {
-            currentPage = currentPage.clickNextButton().waitUntilBenefitTotalVisible();
+    @Step
+    public void addResultsToFavorites(String resourceTitle) throws IOException {
+        resultPage.addToFavorites(resourceTitle);
+    }
 
-            try {
-                // I don't like sleeping in tests, waiting on elements to load is better,
-                // but this element loads with an incorrect value then corrects itself
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                log.error("Sleep Interrupted!!!");
-            }
+    @Step
+    public void verifyBenefitsDisplayed(ResourceFinderResult result) throws IOException {
+        if (result == null) {
+            log.info("No results in test case to assert");
+            return;
         }
 
-        Assert.assertEquals(assertions.getTotalResourceCount(), currentPage.getBenefitTotal());
+        questionPage.clickQuestionnaireNavResults();
 
-        currentPage = currentPage.clickBenefitTotal();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            log.info("sleep interrupted");
+        }
 
-        List<String> resourceTitles = currentPage.getResourceTitles();
+        // Assert total count
+        if (result.getTotalResourceCount() != null) {
+            Assert.assertEquals(result.getTotalResourceCount(), resultPage.getBenefitTotal());
+        }
 
-        assertions.getResourceTitles().forEach(s -> Assert.assertTrue(resourceTitles.contains(s)));
+        // Assert all resource titles on results page
+        List<String> resourceTitles = resultPage.getResourceTitles();
+
+        result.getResultAssertionList().forEach(s -> Assert.assertTrue(resourceTitles.contains(s)));
+
+        // Assert all resource titles on favorites page
+        resultPage.clickQuestionnaireNavFavorites();
+
+        List<String> favoriteTitles = favoritePage.getFavoriteTitles();
+        result.getFavorites().forEach(s -> Assert.assertTrue(favoriteTitles.contains(s)));
+
+
+
     }
 
-    private ResourceFinderTestCase getTestCase(String testCaseFileName) throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        ClassLoader classLoader = getClass().getClassLoader();
-        InputStream inputStream = classLoader.getResourceAsStream("stories/findResources/" + testCaseFileName);
-        String json = IOUtils.toString(inputStream);
-
-        return mapper.readValue(json, ResourceFinderTestCase.class);
-    }
 }

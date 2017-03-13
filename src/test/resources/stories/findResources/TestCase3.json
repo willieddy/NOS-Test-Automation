@@ -1,0 +1,100 @@
+{
+  "title": "Resource Finder Test Case 2",
+  "summary": "Core and Income & Assistance",
+  "answers": [
+    {
+      "section": "CORE",
+      "pageNum": 1,
+      "questionId": 1,
+      "answerType": "RADIO",
+      "answer": [
+        "U.S. Citizen"
+      ]
+    },
+    {
+      "section": "CORE",
+      "pageNum": 1,
+      "questionId": 2,
+      "answerType": "RADIO",
+      "answer": [
+        "Employed (part-time or seasonal)"
+      ]
+    },
+    {
+      "section": "CORE",
+      "pageNum": 1,
+      "questionId": 3,
+      "answerType": "TEXT",
+      "answer": [
+        "6"
+      ]
+    },
+    {
+      "section": "CORE",
+      "pageNum": 1,
+      "questionId": 4,
+      "answerType": "TEXT",
+      "answer": [
+        "20000"
+      ]
+    },
+    {
+      "section": "INCOME & ASSISTANCE",
+      "pageNum": 1,
+      "questionId": 3,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "Food costs",
+        "Health care/insurance costs",
+        "High medical expenses in relation to my income",
+        "Home energy costs",
+        "Mortgage payments"
+      ]
+    },
+    {
+      "section": "INCOME & ASSISTANCE",
+      "pageNum": 1,
+      "questionId": 4,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "Refinancing an existing mortgage",
+        "Planning to repair or improve a residential structure that is more than one year old"
+      ]
+    },
+    {
+      "section": "INCOME & ASSISTANCE",
+      "pageNum": 1,
+      "questionId": 5,
+      "answerType": "RADIO",
+      "answer": [
+        "Very low income"
+      ]
+    },
+    {
+      "section": "INCOME & ASSISTANCE",
+      "pageNum": 2,
+      "questionId": 6,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "Supplemental Nutrition Assistance Program (formerly Food Stamps)",
+        "Special Supplemental Nutrition Program for Women, Infants, and Children (WIC)",
+        "Temporary Assistance for Needy Families (TANF)",
+        "Unemployment Benefits",
+        "Medicare"
+      ]
+    },
+    {
+      "section": "WORK EXPERIENCE",
+      "pageNum": 1,
+      "questionId": 1,
+      "answerType": "CHECKBOX",
+      "answer": [
+        "Authorized to work in the United States"
+      ]
+    }
+  ],
+  "assertions": {
+    "resourceTitles": [
+    ]
+  }
+}

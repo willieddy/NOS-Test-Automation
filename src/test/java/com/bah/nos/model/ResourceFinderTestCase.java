@@ -1,5 +1,6 @@
 package com.bah.nos.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ResourceFinderTestCase {
@@ -8,9 +9,9 @@ public class ResourceFinderTestCase {
 
     private String summary;
 
-    private List<ResourceFinderAnswer> answers;
+    private List<ResourceFinderAnswer> answers = new ArrayList();
 
-    private ResourceFinderAssertions assertions;
+    private ResourceFinderResult result = new ResourceFinderResult();
 
     public String getTitle() {
         return title;
@@ -36,11 +37,11 @@ public class ResourceFinderTestCase {
         this.answers = answers;
     }
 
-    public ResourceFinderAssertions getAssertions() {
-        return assertions;
+    public ResourceFinderResult getResult() {
+        return result;
     }
 
-    public void setAssertions(ResourceFinderAssertions assertions) {
-        this.assertions = assertions;
+    public void setResult(ResourceFinderResult result) {
+        this.result = result;
     }
 }

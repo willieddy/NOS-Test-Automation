@@ -1,4 +1,4 @@
-package com.bah.nos.pages;
+package com.bah.nos.model.pages;
 
 import com.bah.nos.model.NosPageEnum;
 import net.serenitybdd.core.annotations.findby.By;
@@ -7,6 +7,7 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.ElementNotVisibleException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
@@ -17,7 +18,15 @@ public class NosBasePage extends PageObject {
 
     private static final Logger log = LoggerFactory.getLogger(NosBasePage.class);
 
+    // -------- Xpath Functions --------
+
+    protected static final String XPATH_TO_UPPERCASE =
+            "translate(%s,'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')";
+
+    // -------- Navigation xpath components --------
+
     private static final String NAV_XPATH_BASE = "//nav[@id='nav']";
+
     private static final String NAV_XPATH_EXTENSION = "//li[contains(.,'%s')]";
 
     @FindBy(xpath = "//*[@class='page__title title']")
@@ -82,6 +91,39 @@ public class NosBasePage extends PageObject {
         } catch (InterruptedException e) {
             log.error("Sleep interrupted");
         }
+    }
+
+    /**
+     * This is only necessary because scroll to element that is called automatically puts some objects
+     * behind the page header
+     */
+    protected void scrollToTop() {
+        ((JavascriptExecutor) getDriver()).executeScript("window.scrollTo(0,0);");
+        sleep(500);
+    }
+
+    /**
+     * Format input to xPath statement
+     * Wraps all inputs with single quotes (') in a concat statement using double quotes
+     * http://www.seleniumtests.com/2010/08/xpath-and-single-quotes.html
+     * @param input the string to be verified and changed if necessary - comparison string not wrapped in quotes
+     * @return formatted string wrapped in single quotes if no xPath function necessary,
+     *         xPath function if input contains a single quote
+     */
+    protected String formatXpathStringInput(String input) {
+        StringBuilder result = new StringBuilder();
+
+        if (input.contains("'")) {
+            result.append("concat(\"");
+            result.append(input.replaceAll("'", "\", \"'\", \""));
+            result.append("\")");
+        } else {
+            result.append("'");
+            result.append(input);
+            result.append("'");
+        }
+
+        return result.toString();
     }
 
 }
