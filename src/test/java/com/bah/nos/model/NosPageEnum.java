@@ -1,8 +1,8 @@
 package com.bah.nos.model;
 
-import com.bah.nos.pages.HomePage;
-import com.bah.nos.pages.NosBasePage;
-import com.bah.nos.pages.ResourceFinderPage;
+import com.bah.nos.model.pages.HomePage;
+import com.bah.nos.model.pages.NosBasePage;
+import com.bah.nos.model.pages.ResourceFinderQuestionPage;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,7 +12,7 @@ public enum NosPageEnum {
     HOME("WELCOME TO NATIVE ONE STOP", new ArrayList<>(Arrays.asList("Home")), HomePage.class),
     FINDER("Resource Finder",
             new ArrayList<>(Arrays.asList("Resources", "Resources,Resource Finder")),
-            ResourceFinderPage.class),
+            ResourceFinderQuestionPage.class),
     CATEGORY("Browse by Category", new ArrayList<>(Arrays.asList("Resources,Browse by Category"))),
     AGENCY("Browse by Agency", new ArrayList<>(Arrays.asList("Resources,Browse by Agency"))),
     TOOLKIT("Native One Stop Toolkit", new ArrayList<>(Arrays.asList("Resources,Native One Stop Toolkit"))),

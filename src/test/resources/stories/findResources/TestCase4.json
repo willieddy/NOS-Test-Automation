@@ -67,6 +67,19 @@
       ]
     }
   ],
-  "assertions": {
+  "result": {
+    "totalResourceCount": 46,
+    "resultAssertionList": [
+      "DIVISION OF INDIAN AND NATIVE AMERICAN PROGRAMS (DINAP)",
+      "RURAL ENERGY FOR AMERICA PROGRAM (REAP)",
+      "WIC FARMERS' MARKET NUTRITION PROGRAM (FMNP)",
+      "SPECIAL MILK PROGRAM"
+    ],
+    "favorites": [
+      "DIVISION OF INDIAN AND NATIVE AMERICAN PROGRAMS (DINAP)",
+      "RURAL ENERGY FOR AMERICA PROGRAM (REAP)",
+      "WIC FARMERS' MARKET NUTRITION PROGRAM (FMNP)",
+      "SPECIAL MILK PROGRAM"
+    ]
   }
 }

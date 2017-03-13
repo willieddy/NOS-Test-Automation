@@ -89,4 +89,13 @@ public class ResourceFinderAnswer {
     public enum AnswerTypeEnum {
         RADIO, TEXT, CHECKBOX
     }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        builder.append(section.getSectionTitle());
+        builder.append(" Section, Question ID ");
+        builder.append(questionId);
+        return builder.toString();
+    }
 }

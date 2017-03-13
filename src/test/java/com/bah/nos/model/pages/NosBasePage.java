@@ -1,4 +1,4 @@
-package com.bah.nos.pages;
+package com.bah.nos.model.pages;
 
 import com.bah.nos.model.NosPageEnum;
 import net.serenitybdd.core.annotations.findby.By;
@@ -18,7 +18,15 @@ public class NosBasePage extends PageObject {
 
     private static final Logger log = LoggerFactory.getLogger(NosBasePage.class);
 
+    // -------- Xpath Functions --------
+
+    protected static final String XPATH_TO_UPPERCASE =
+            "translate(%s,'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')";
+
+    // -------- Navigation xpath components --------
+
     private static final String NAV_XPATH_BASE = "//nav[@id='nav']";
+
     private static final String NAV_XPATH_EXTENSION = "//li[contains(.,'%s')]";
 
     @FindBy(xpath = "//*[@class='page__title title']")

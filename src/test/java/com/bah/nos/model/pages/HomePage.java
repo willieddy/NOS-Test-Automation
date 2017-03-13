@@ -1,4 +1,4 @@
-package com.bah.nos.pages;
+package com.bah.nos.model.pages;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;

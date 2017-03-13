@@ -1,6 +1,6 @@
 package com.bah.nos.steps.serenity;
 
-import com.bah.nos.pages.NosBasePage;
+import com.bah.nos.model.pages.NosBasePage;
 import com.bah.nos.model.NosPageEnum;
 import net.thucydides.core.annotations.Step;
 import org.junit.Assert;
