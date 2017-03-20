@@ -13,7 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@DefaultUrl("https://www.nativeonestop.gov")
+@DefaultUrl("http://local.nativeonestop.gov")
 public class NosBasePage extends PageObject {
 
     private static final Logger log = LoggerFactory.getLogger(NosBasePage.class);

@@ -8,7 +8,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import org.openqa.selenium.WebDriver;
 
-@DefaultUrl("https://www.nativeonestop.gov/resources/resource-finder")
+@DefaultUrl("http://local.nativeonestop.gov/resources/resource-finder")
 public class ResourceFinderQuestionPage extends ResourceFinderPage {
 
     // -------- Question and answer xpath strings --------

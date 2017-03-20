@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@DefaultUrl("https://www.nativeonestop.gov/resources/resource-finder#results")
+@DefaultUrl("http://local.nativeonestop.gov/resources/resource-finder#results")
 public class ResourceFinderResultPage extends ResourceFinderPage {
 
     private static final String FAVORITE_BUTTON_XPATH = "//td[./h2/a[" +
