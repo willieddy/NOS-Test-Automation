@@ -22,6 +22,9 @@ More advanced filtering techniques can be employed for more advanced CI features
 Using Groovy script exampe: `mvn clean verify -Dmetafilter="groovy: level ==~ /.*[testing|regression].*/"`  
 Filtering in examples table in story file (see section Filtering on Example Scenarios): `{metaByRow=true}`
 
+### [Running in different environments](http://serenity-bdd.info/docs/serenity/#_opening_the_page)
+These tests can be run in different environments by editing the `webdriver.base.url` property
+
 ## Data Driven Tests
 Analysis of questionnaire is data driven where the information is provided from a json file
 This file contains four base level objects
