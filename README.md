@@ -41,8 +41,7 @@ for generating report
   
 ### [Data Driven Tests](http://serenity-bdd.info/docs/serenity/#_data_driven_tests)
 
-Analysis of questionnaire is data driven where the information is provided from a 
-[csv file](http://serenity-bdd.info/docs/serenity/#_using_test_data_from_csv_files) and run as concurrent tests
+Analysis of questionnaire is data driven where the information is provided from a json file and run as concurrent tests
 
 ### [Filtering test runs](http://serenity-bdd.info/docs/serenity/#_jbehave)
 Simple filtering using tags example:  `mvn clean verify -Dmetafilter="+feature Reporting"`
